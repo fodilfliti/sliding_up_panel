@@ -519,7 +519,7 @@ class _SlidingUpPanelState extends State<SlidingUpPanel>
   void _onGestureSlide(double dy) {
     // only slide the panel if scrolling is not enabled
     if (widget.controller?._nowTargetForceDraggable == false &&
-        widget.disableDraggableOnScrolling) {
+        !widget.disableDraggableOnScrolling) {
       return;
     }
     if ((!_scrollingEnabled) ||
